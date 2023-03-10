@@ -1,0 +1,7 @@
+#!/bin/bash
+
+lightup=$(xbacklight -dec 5)
+updt=$(kill -44 $(pidof dwmblocks))
+
+
+

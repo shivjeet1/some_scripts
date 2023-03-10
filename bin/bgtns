@@ -1,0 +1,12 @@
+#!/bin/bash
+
+bright=$(xbacklight -get)
+icon=$(echo " ")
+echo $icon $(printf "%.f \n" $bright)
+
+#echo $sbright
+
+
+
+
+
