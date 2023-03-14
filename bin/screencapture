@@ -2,6 +2,6 @@
 
 sleep 1
 
-shot=$(ffmpeg -f x11grab -video_size 1920x1080 -i $DISPLAY -vframes 1 ~/pix/sc/$1.png)
+ffmpeg -f x11grab -video_size 1920x1080 -i $DISPLAY -vframes 1 ~/pix/sc/$1.png
 
 notify-send "ScreenShot Captured !!"
