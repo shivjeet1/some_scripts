@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]
+	then
+		wpic=$(ls ~/pix/wallp | shuf -n1)
+	else
+		wpic=$1
+fi
+
+xwallpaper --zoom ~/pix/wallp/$wpic
+
+wal -s -i ~/pix/wallp/$wpic
+
+sed '/urg/d' -i ~/.cache/wal/colors-wal-dwm.h
+sed '31s/0/256/' -i ~/.cache/wal/colors-wal-st.h
+
+#echo "enter passwd:"
+cd ~/.local/src/dwm && sudo make clean install > /dev/null
+cd ~/.local/src/st && sudo make clean install > /dev/null
+cd ~/.local/src/dmenu && sudo make clean install > /dev/null
+
+
