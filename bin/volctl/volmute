@@ -1,4 +1,0 @@
-#!/bin/bash
-
-volup=$(wpctl set-mute @DEFAULT_SINK@ toggle)
-updt=$(kill -44 $(pidof dwmblocks))

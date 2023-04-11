@@ -1,4 +1,0 @@
-#!/bin/bash
-
-volup=$(wpctl set-volume @DEFAULT_SINK@ 5%+)
-updt=$(kill -44 $(pidof dwmblocks))
